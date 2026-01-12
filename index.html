@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>APAO - Bakpao Lembut</title>
+ 
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(180deg, #ffd6e7, #fff1f7);
+    color: #5a2e1f;
+}
+
+.container {
+    max-width: 420px;
+    margin: auto;
+    padding: 24px;
+    text-align: center;
+}
+
+/* HEADER */
+.logo {
+    font-size: 38px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.tagline {
+    font-size: 15px;
+    margin-bottom: 22px;
+    opacity: 0.9;
+}
+
+/* HERO */
+.hero-img {
+    width: 100%;
+    max-width: 260px;
+    border-radius: 24px;
+    margin: 0 auto 28px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+/* CARD */
+.section {
+    background: rgba(255,255,255,0.85);
+    border-radius: 22px;
+    padding: 22px;
+    margin-bottom: 22px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+.section h3 {
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+/* RASA */
+.rasa {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.rasa-item {
+    width: 100px;
+    background: #ffe6f0;
+    border-radius: 18px;
+    padding: 10px;
+}
+
+.rasa-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.rasa-item span {
+    display: block;
+    margin-top: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* PRICE */
+.price {
+    font-size: 15px;
+    margin: 6px 0;
+}
+
+/* BUTTON */
+.cta {
+    margin-top: 26px;
+}
+
+.cta a {
+    display: block;
+    width: 100%;
+    background: linear-gradient(135deg, #ff7ab8, #ff4d99);
+    color: white;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 8px 18px rgba(255,77,153,0.4);
+    transition: 0.3s;
+}
+
+.cta a:hover {
+    transform: scale(1.04);
+}
+
+/* FOOTER */
+.footer {
+    font-size: 12px;
+    margin-top: 22px;
+    opacity: 0.7;
+}
+
+/* =====================
+   ANIMATIONS
+===================== */
+
+/* page load */
+.container {
+    animation: fadeUp 0.9s ease forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* rasa hover */
+.rasa-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rasa-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+/* button hover */
+.cta a {
+    position: relative;
+    overflow: hidden;
+}
+
+.cta a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.25);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.cta a:hover::after {
+    opacity: 1;
+}
+
+/* soft pulse */
+.cta a {
+    animation: softPulse 2.8s ease-in-out infinite;
+}
+
+@keyframes softPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.04);
+    }
+}
+
+.icon {
+    display: block;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.label {
+    display: block;
+    margin-top: 4px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="logo">APAO</div>
+    <div class="tagline">Lembutnya Bikin Sayang 💕</div>
+
+    <!-- GANTI GAMBAR LOGO -->
+    <img src="foto/logo.png" alt="Bakpao APAO" class="hero-img">
+
+    <!-- VARIAN -->
+    <div class="section">
+        <h3>🍓 Varian Rasa</h3>
+        <div class="rasa">
+            <div class="rasa-item">
+                <img src="foto/coklat.jpg" alt="Coklat">
+                <span class="icon">🍫</span>
+                <span class="label">Coklat</span>
+            </div>
+
+            <div class="rasa-item">
+                <img src="foto/strawberry.png" alt="Strawberry">
+                <span class="icon">🍓</span>
+                <span class="label">Strawberry</span>
+            </div>
+
+            <div class="rasa-item">
+                <img src="foto/taro.png" alt="Taro">
+                <span class="icon">🍠</span>
+                <span class="label">Taro</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- HARGA -->
+    <div class="section">
+        <h3>💰 Harga</h3>
+        <div class="price">❤️ 3 Bakpao : <b>Rp 5.000</b></div>
+        <div class="price">❤️ 7 Bakpao : <b>Rp 10.000</b></div>
+    </div>
+
+    <!-- BUTTON -->
+    <div class="cta">
+        <a href="https://wa.me/6289608048497?text=Halo%20APAO,%20saya%20ingin%20pre-order%20bakpao%20😊" target="_blank">
+            📲 Pre-Order via WhatsApp
+        </a>
+    </div>
+
+    <div class="footer">
+        © 2025 APAO • Bakpao Lembut & Lucu<br>
+        by KZ
+    </div>
+
+</div>
+
+</body>
+</html>
